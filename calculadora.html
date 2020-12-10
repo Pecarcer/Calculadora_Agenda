@@ -1,0 +1,155 @@
+<!-- 
+/*********************************
+ Autor: José Carmona Cervera
+ Fecha creación: 30/11/2020
+ Última modificación: 10/12/2020 
+ Versión: 1.00
+***********************************/
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/calculadora.css" />
+    <script type="text/javascript" src="js/calculadora.js"></script>
+  </head>
+
+  <body>
+    <form name="calculadora" class="calculadora">
+      <table>
+        <tr>
+          <td colspan="5">
+            <input type="textfield" name="mostradorArriba" id="mostradorArriba" readonly /> 
+            <input type="textfield" name="mostradorAbajo"  id="mostradorAbajo"  readonly value="0" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="button" disabled value="MC" />
+          </td>
+
+          <td>
+            <input type="button" disabled value="MR" />
+          </td>
+
+          <td>
+            <input type="button" disabled value="MS" />
+          </td>
+
+          <td>
+            <input type="button" disabled value="M+" />
+          </td>
+
+          <td>
+            <input type="button" disabled value="M-" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="button" id="atras" value="&larr;" />
+          </td>
+
+          <td>
+            <input type="button" id="borrarCE" value="CE" />
+          </td>
+
+          <td>
+            <input type="button" id="borrarC" value="C" />
+          </td>
+
+          <td>
+            <input type="button" id="masMenos" value="±" />
+          </td>
+
+          <td>
+            <input type="button" id="raizCu" value="&#8730" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="button" id="siete" value="7" />
+          </td>
+
+          <td>
+            <input type="button" id="ocho" value="8" />
+          </td>
+
+          <td>
+            <input type="button" id="nueve" value="9" />
+          </td>
+
+          <td>
+            <input type="button" id="division" value="/" />
+          </td>
+
+          <td>
+            <input type="button" id="porCiento" value="%" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="button" id="cuatro" value="4" />
+          </td>
+
+          <td>
+            <input type="button" id="cinco" value="5" />
+          </td>
+
+          <td>
+            <input type="button" id="seis" value="6" />
+          </td>
+
+          <td>
+            <input type="button" id="multiplicacion" value="*" />
+          </td>
+
+          <td>
+            <input type="button" id="unoEquis" value="1/x" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="button" id="uno" value="1" />
+          </td>
+
+          <td>
+            <input type="button" id="dos" value="2" />
+          </td>
+
+          <td>
+            <input type="button" id="tres" value="3" />
+          </td>
+
+          <td>
+            <input type="button" id="resta" value="-" />
+          </td>
+
+          <td rowspan="2" height="100px">
+            <input type="button" id="igual" value="="  class="alargado"/>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">         
+                <input type="button" id="cero" value="0"  class="alargado" id="resultado"/>
+          </td>
+
+          <td>
+            <input type="button" id="coma" value="." />
+          </td>
+
+          <td>
+            <input type="button" id="suma" value="+" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

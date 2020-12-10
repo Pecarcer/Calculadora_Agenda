@@ -1,0 +1,16 @@
+/*********************************
+ Autor: José Carmona Cervera
+ Fecha creación: 30/11/2020
+ Última modificación: 10/12/2020 
+ Versión: 1.00
+***********************************/
+
+.imagen{
+    height: 75px;
+    width: 75px;
+}
+
+.lateral{ 
+    text-align: center;
+    line-height: 10px;
+}

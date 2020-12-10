@@ -1,0 +1,133 @@
+<!-- 
+/*********************************
+ Autor: José Carmona Cervera
+ Fecha creación: 30/11/2020
+ Última modificación: 10/12/2020 
+ Versión: 1.00
+***********************************/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/agenda.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type="text/javascript" src="./js/agenda.js"></script>
+
+    <title>Agenda</title>
+</head>
+<body>
+    <div class="container-fluid" >
+		<div class="panel panel-primary" >
+			<div class="panel-heading" >
+				<h3 class="panel-title" >
+					<b>Agenda</b>					
+				</h3>
+			</div>
+			<div class="panel-body" >
+
+				<div class="row">
+
+					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+
+						<div class="input-group" >
+							<span class="input-group-addon" >Nº Registro:</span>
+							<input type="number" min="1" id="nId" name="nId" class="form-control" >
+							<span class="input-group-btn" >
+							<button class="btn btn-default" type="submit" id="mostrar" name="mostrar" onclick="verContacto()"style="background-color:#617bbb ;"><span class="glyphicon glyphicon-search" style="background-color: #617bbb; color:#FFFFFF;"></span></button>
+							</span>
+						</div>
+
+					</div>
+
+					<div class="col-md-1">&nbsp;<br></div>
+                    
+					<div class="col-md-4 col-lg-3 center-block">
+                        
+						<center>
+                            <h3 class="panel-title">Registro</h3><br>
+							<button class="btn btn-default" id="primerContacto" name="primerContacto" type="submit" onclick="primerContacto()" style="background-color: #ec7565;color:#FFFFFF;"><span class="glyphicon glyphicon-backward"></span></button>
+							<button class="btn btn-default" id="contactoAnterior" name="contactoAnterior" type="submit" onclick="contactoAnterior()" style="background-color: #ec7565;color:#FFFFFF;"><span class="glyphicon glyphicon-chevron-left"></span></button>
+							<label name="indicador" id="indicador">&nbsp;&nbsp;1 de 5&nbsp;&nbsp;</label>
+							<button class="btn btn-default" id="contactoSiguiente" name="contactoSiguiente" type="submit" onclick="contactoSiguiente()" style="background-color: #ec7565;color:#FFFFFF;"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                            <button class="btn btn-default" id="ultimoContacto" name="ultimoContacto" type="submit" onclick="ultimoContacto()" style="background-color: #ec7565;color:#FFFFFF;"><span class="glyphicon glyphicon-forward"></span></button>
+						</center>
+					</div>					
+					
+				</div>
+
+				<div class="row">
+					<div class="col-md-1 center-block"><br></div>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5" >
+						<div class="panel panel-default" >
+							<div class="panel-heading"style="background-color: #f9d477;">
+								<h3 class="panel-title">
+									Información del contacto
+								</h3>
+							</div>
+							<div class="panel-body">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-md-12 col-sm-12 col-xs-12">
+
+											<div class="form-group ">
+												<label class="control-label requiredField" for="nombre">Nombre:
+												</label>
+												<input class="form-control" id="nombre" name="nombre" value=""  type="text" placeholder="Juanito" />
+											</div>
+											<div class="form-group ">
+												<label class="control-label requiredField" for="apellidos">Apellidos:
+												</label>
+												<input class="form-control" id="apellidos" name="apellidos"  type="text"  placeholder="Apellidez de Ejemplez"/>
+											</div>
+											<div class="form-group ">
+												<label class="control-label " for="telefono">Teléfono fijo:</label>
+												<input class="form-control" onkeypress="return sinLetras(event)" id="telefono" name="telefono" type="tel" placeholder="959377299" />
+											</div>
+
+											<div class="form-group ">
+												<label class="control-label " for="nacimiento">Fecha de nacimiento:</label>
+												<input class="form-control" id="nacimiento" name="nacimiento" placeholder="DD/MM/YYYY" type="date"  />
+                                            </div>
+											<div class="form-group">
+                                                
+												<div class="center-block">
+													<div><br></div>
+													<button class="btn btn-info btn-md" name="bNuevo" id="bNuevo" type="submit" onclick="nuevoContacto()">
+													<span class="glyphicon glyphicon-plus"></span>&nbsp;</span><b>&nbsp;Nuevo</B></button>
+													<button class="btn btn-primary btn-success" name="guardar" id="guardar" type="submit" onclick="guardarContacto()">
+													<span class="glyphicon glyphicon-floppy-disk"></span>&nbsp;<b>Guardar</b></button>
+													<button class="btn btn-danger" name="borrar" id="borrar" type="submit" onclick="borrarContacto()">
+													<span class="glyphicon glyphicon-remove"></span>&nbsp;</span><b>&nbsp;Borrar</B></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="table-responsive col-xs-12 col-sm-12 col-md-7 col-lg-7">
+						<table id="tablaContactos" class="table col-md-12 col-sm-12 col-xs-12">
+							<tr>
+								<th>Nombre</th>
+								<th>Apellidos</th>
+								<th>Tel&eacute;fono</th>
+                                <th>Nacimiento</th>
+							</tr>
+							<script type="text/javascript">
+							generarTabla();</script>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
